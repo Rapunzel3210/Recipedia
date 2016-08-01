@@ -16,7 +16,10 @@ class NewRecipeHandler(webapp2.RequestHandler):
 
     def post(self):
         template = jinja_environment.get_template('templates/recipe_list.html')
-
+        author_value=self.request.get('author')
+        name_value=self.request.get('name')
+        level_value=float(self.request.get('level'))
+        
 
 app = webapp2.WSGIApplication([
   ('/', NewRecipeHandler),
