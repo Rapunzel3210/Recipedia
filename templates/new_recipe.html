@@ -1,50 +1,39 @@
 <!DOCtype html>
 <html>
+
   <head>
-    <title>Upload New Recipe</title>
+    <title>Uplaod New Recipe</title>
   </head>
 
   <center>
     <body>
-      <h1> Recipe Entry </h1>
-      <form method=post>
-        <p><strong>Author's Name:</strong> <input type="text" name="author"/></p>
-        <p><strong>Recipe Name:</strong> <input type="text" name="name"/></p>
+    <h1> Recipe Entry </h1>
+        <form method=post>
+          <p><strong>Author's Name:</strong><br><input type="text" name="author"/></p>
+          <p><strong>Recipe Name:</strong><br><input type="text" name="name"/></p>
 
-        <!-- Drop down level of difficulty -->
-        <p><strong>Level of Difficulty:</strong>
-        <select>
-          <option>Easy</option>
-          <option>Medium</option>
-          <option>Hard</option>
-        </select>
-        </p>
+          <!-- Drop down level of difficulty -->
+          <p><strong>Level of Difficulty:</strong><br>
+              <select>
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+              </select>
+          </p>
 
-        <p><strong>Ingredients:</strong>
-        <select>
-          <option>Beef</option>
-          <option>Cheese</option>
-          <option>Chicken</option>
-          <option>Pasta</option>
-          <!-- <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option> -->
-        </select>
-        </p>
-        <p><strong>Add Ingredients:</strong><input type="text" name=new_ingredient/></p>
-        <p><strong>Time:</strong> <input type="text" name="time"/> </p>
-        <p><strong>Steps:</strong> <input type="text" name="steps"/></p>
-        <p><strong>Notes:</strong><textarea placeholder ="i.e. Kraft mozzarella cheese"></textarea></p>
-        <button type="button">Submit</button>
-    </form>
-  </body>
-</center>
+          <p><strong>Ingredients:</strong><br>
+                <form action="">
+                <br><input type="checkbox" name="ingredient" value="Beef">Beef<br>
+                <input type="checkbox" name="ingredient" value="Chicken">Chicken<br>
+                </form>
+
+          </p>
+          <p><strong>Add Ingredients:</strong><br><input type="text" name=new_ingredient/></p>
+          <p><strong>Time:</strong><br><input type="text" name="time"/> </p>
+          <p><strong>Steps:</strong><br><textarea></textarea></p>
+          <p><strong>Notes:</strong><br><textarea placeholder ="i.e. Kraft mozzarella cheese"></textarea></p>
+          <button type="button">Submit</button>
+          </form>
+    </body>
+  </center>
 </html>
