@@ -27,7 +27,7 @@ class NewRecipeHandler(webapp2.RequestHandler):
         'name_answer': name_value,
         'level_answer': level_value
         }
-        recipe_record = Recipe(author=author_value, recipe_name=name_value, difficulty=level_value)
+        recipe_record = Recipe(author=author_value, recipe_name=name_value, level=level_value)
         recipe_key = recipe_record.put()
 
         self.response.write(template.render(new_recipe))
@@ -35,7 +35,7 @@ class NewRecipeHandler(webapp2.RequestHandler):
 class Recipe(ndb.Model):
     author = ndb.StringProperty(required=True)
     recipe_name = ndb.StringProperty(required=True)
-    difficulty = ndb.StringProperty(required=True)
+    level = ndb.StringProperty(required=True)
 
 app = webapp2.WSGIApplication([
   ('/', NewRecipeHandler),
