@@ -29,7 +29,7 @@ class NewRecipeHandler(webapp2.RequestHandler):
         recipe_record = Recipe(author=author_value, recipe_name=name_value, level=level_value)
         recipe_key = recipe_record.put()
 
-        self.response.write(template.render(new_recipe))
+        #self.response.write(template.render(new_recipe))
 
 class Recipe(ndb.Model):
     author = ndb.StringProperty(required=True)
