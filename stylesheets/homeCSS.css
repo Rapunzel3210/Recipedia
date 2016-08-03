@@ -1,10 +1,10 @@
 h1 {
-   font-size: 250px;
-   font-style: oblique;
-   font-family: Impact, Charcoal, sans-serif;
-   color: red;
-   text-align: center;
-   text-decoration: underline;
+  font-size: 250px;
+  font-style: oblique;
+  font-family: Impact, Charcoal, sans-serif;
+  color: red;
+  text-align: center;
+  text-decoration: underline;
 }
 
 body {
@@ -16,7 +16,21 @@ body {
 }
 
 input[type=button] {
-    width: 20em;
-    height: 2em;
-    color: red;
+  width: 20em;
+  height: 2em;
+  color: red;
+}
+
+#btn1 {
+  float:left;
+  display:block;
+  margin-left:300px;
+  clear:right;
+}
+
+#btn2 {
+  float:right;
+  display:block;
+  margin-right:300px;
+  clear:left;
 }
