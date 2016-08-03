@@ -9,8 +9,11 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
--url: /js
- static_dir: js
+- url: /bootstrap-3.3.7-dist 2
+  static_dir: bootstrap-3.3.7-dist 2
+
+- url: /script
+  static_dir: script
 
 - url: /stylesheets
   static_dir: stylesheets
