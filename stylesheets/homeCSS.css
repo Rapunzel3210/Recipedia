@@ -1,4 +1,22 @@
-h1
-{
-   font-size: 250%;
+h1 {
+   font-size: 250px;
+   font-style: oblique;
+   font-family: Impact, Charcoal, sans-serif;
+   color: red;
+   text-align: center;
+   text-decoration: underline;
+}
+
+body {
+  background-image: url(http://clipartix.com/wp-content/uploads/2016/06/Free-open-book-clipart-public-domain-open-book-clip-art-images.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-image: url(http://www.siue.edu/~vaupont/images/GetCooking.png);*/
+  /*background-repeat: no-repeat;*/
+}
+
+input[type=button] {
+    width: 20em;
+    height: 2em;
+    color: red;
 }
