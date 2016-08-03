@@ -63,9 +63,30 @@ class Recipe(ndb.Model):
     steps = ndb.StringProperty(required=True)
     notes = ndb.StringProperty(required=True)
 
+    @classmethod #This should work as a search
+    def query_recipe(cls, level_value):
+        return cls.query(level=level_value)
+
+
+class RecipeResultsHandler(webapp2.RequestHandler):
+    GREETINGS_PER_PAGE = 20
+    def get(self):
+        level = self.request.get('level')
+        recipes = Recipe.query().filter(Recipe.level==level).fetch(
+            self.GREETINGS_PER_PAGE)
+
+        self.response.out.write('<html><body>')
+
+        for recipe in recipes:
+            self.response.out.write(
+                '<blockquote>%s</blockquote>' % recipe.recipe_name)
+
+        self.response.out.write('</body></html>')
+
 app = webapp2.WSGIApplication([
   ('/', HomeHandler),
   ('/new_recipe', NewRecipeHandler),
   ('/results', ResultsHandler),
   ('/search', SearchHandler),
+  ('/recipe_results', RecipeResultsHandler),
 ], debug=True)

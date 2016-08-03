@@ -2,3 +2,41 @@
    background-image: url(http://www.fitbrains.com/blog/wp-content/uploads/2013/09/2ahi2c3.gif);
    background-repeat: no-repeat;
  }
+
+ /*.ingredient {
+ 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eb4196), color-stop(1, #e83737));
+ 	background:-moz-linear-gradient(top, #eb4196 5%, #e83737 100%);
+ 	background:-webkit-linear-gradient(top, #eb4196 5%, #e83737 100%);
+ 	background:-o-linear-gradient(top, #eb4196 5%, #e83737 100%);
+ 	background:-ms-linear-gradient(top, #eb4196 5%, #e83737 100%);
+ 	background:linear-gradient(to bottom, #eb4196 5%, #e83737 100%);
+ 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb4196', endColorstr='#e83737',GradientType=0);
+ 	background-color:#eb4196;
+ 	-moz-border-radius:28px;
+ 	-webkit-border-radius:28px;
+ 	border-radius:28px;
+ 	border:1px solid #000000;
+ 	display:inline-block;
+ 	cursor:pointer;
+ 	color:#ffffff;
+ 	font-family:Trebuchet MS;
+ 	font-size:17px;
+ 	font-weight:bold;
+ 	padding:16px 31px;
+ 	text-decoration:none;
+ 	text-shadow:0px 1px 0px #000000;
+ }
+ .ingredient:hover {
+ 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e83737), color-stop(1, #eb4196));
+ 	background:-moz-linear-gradient(top, #e83737 5%, #eb4196 100%);
+ 	background:-webkit-linear-gradient(top, #e83737 5%, #eb4196 100%);
+ 	background:-o-linear-gradient(top, #e83737 5%, #eb4196 100%);
+ 	background:-ms-linear-gradient(top, #e83737 5%, #eb4196 100%);
+ 	background:linear-gradient(to bottom, #e83737 5%, #eb4196 100%);
+ 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e83737', endColorstr='#eb4196',GradientType=0);
+ 	background-color:#e83737;
+ }
+ .ingredient:active {
+ 	position:relative;
+ 	top:1px;
+ }*/

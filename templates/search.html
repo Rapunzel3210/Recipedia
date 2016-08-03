@@ -11,25 +11,28 @@
 <center>
   <body>
     <h1>Search</h1>
-    <form>
+    <form method="GET" action="recipe_results">
       <p><strong>Level of Difficulty:</strong><br>
           <select name= "level">
+            <option value="All">All</option>
             <option value="Easy">Easy</option>
             <option value="Medium">Medium</option>
             <option value="Hard">Hard</option>
           </select>
       </p>
 
-      <p><strong>Ingredients:</strong><br>
+      <!-- <p><strong>Ingredients:</strong><br>
             <form action="">
             <br><input type="checkbox" name="ingredient" value="Beef">Beef<br>
             <input type="checkbox" name="ingredient" value="Chicken">Chicken<br>
             </form>
-      </p>
-      <button type="button" value="Submit">Submit</button>
+      </p> -->
+      <input type="submit" action="submit"></input>
     </form>
     <a href="/"><input type="button" name="button" value="Back to Home Page"></a>
   </body>
 </center>
 
 </html>
+
+<!-- Another page for the actual results in an unordered list -->
