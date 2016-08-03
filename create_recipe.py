@@ -6,6 +6,13 @@ import webapp2
 jinja_environment = jinja2.Environment(loader=
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
+class HomeHandler(webapp2.RequestHandler):
+
+    def get(self):
+        template = jinja_environment.get_template('templates/home.html')
+
+        self.response.write(template.render())
+
 class NewRecipeHandler(webapp2.RequestHandler):
 
     def get(self):
@@ -50,6 +57,7 @@ class Recipe(ndb.Model):
     notes = ndb.StringProperty(required=True)
 
 app = webapp2.WSGIApplication([
-  ('/', NewRecipeHandler),
+  ('/', HomeHandler),
+  ('/new_recipe', NewRecipeHandler),
   ('/results', ResultsHandler),
 ], debug=True)
