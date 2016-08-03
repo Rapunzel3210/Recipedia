@@ -36,7 +36,28 @@
                 <input type="checkbox" name="ingredient" value="Chicken">Chicken<br>
 
           </p>
-          <p><strong>Add Ingredients:</strong><br><input type="text" name="new_ingredients"></p>
+          <p id="addI"><strong>Add Ingredients:</strong><br></p>
+
+          </p>
+          <button onclick="myFunction()">Add Ingredients</button>
+          <input id="textinput" />
+          <script>
+          function myFunction() {
+              var node = document.createElement("INPUT");
+              node.type="checkbox"
+              var textnode = document.createTextNode("textbox");
+
+              document.getElementById("addI").appendChild(node);
+              document.getElementById("addI").appendChild(textnode);
+              var br = document.createElement("br");
+              document.getElementById("p").appendChild(br);
+
+              //document.write("\n");
+
+              }
+          </script>
+
+
           <p><strong>Time:</strong><br><input type="text" name="time"> </p>
           <p><strong>Steps:</strong><br><textarea name="steps"></textarea></p>
           <p><strong>Notes:</strong><br><textarea name="notes" placeholder ="i.e. Kraft mozzarella cheese"></textarea></p>
