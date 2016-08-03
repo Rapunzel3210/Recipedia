@@ -13,6 +13,13 @@ class HomeHandler(webapp2.RequestHandler):
 
         self.response.write(template.render())
 
+class SearchHandler(webapp2.RequestHandler):
+
+    def get(self):
+        template = jinja_environment.get_template('templates/search.html')
+
+        self.response.write(template.render())
+
 class NewRecipeHandler(webapp2.RequestHandler):
 
     def get(self):
@@ -60,4 +67,5 @@ app = webapp2.WSGIApplication([
   ('/', HomeHandler),
   ('/new_recipe', NewRecipeHandler),
   ('/results', ResultsHandler),
+  ('/search', SearchHandler),
 ], debug=True)
