@@ -18,7 +18,7 @@
     <body>
     <h1> Recipedia </h1>
     <h1> Recipe Entry </h1>
-        <form method=POST action="results" name="form_1">
+        <form action="results" name="form_1" method="POST">
           <p><strong>Author's Name:</strong><br><input type="text" name="author"/></p>
           <p><strong>Recipe Name:</strong><br><input type="text" name="name"/></p>
 
@@ -39,18 +39,18 @@
           <p id="addI"><strong>Add Ingredients:</strong><br></p>
 
           </p>
-          <button onclick="myFunction()">Add Ingredients</button>
+          <a onclick="myFunction()">Add Ingredients</a>
           <input id="textinput" />
           <script>
           function myFunction() {
               var node = document.createElement("INPUT");
-              node.type="checkbox"
-              var textnode = document.createTextNode("textbox");
+              node.type="checkbox";
+              var textnode = document.createTextNode(document.getElementById("textinput").value);
 
               document.getElementById("addI").appendChild(node);
               document.getElementById("addI").appendChild(textnode);
               var br = document.createElement("br");
-              document.getElementById("p").appendChild(br);
+              document.getElementById("addI").appendChild(br);
 
               //document.write("\n");
 
@@ -61,7 +61,7 @@
           <p><strong>Time:</strong><br><input type="text" name="time"> </p>
           <p><strong>Steps:</strong><br><textarea name="steps"></textarea></p>
           <p><strong>Notes:</strong><br><textarea name="notes" placeholder ="i.e. Kraft mozzarella cheese"></textarea></p>
-          <input type="submit" onclick="display_alert(event)" />
+          <input type="submit" action="submit" onclick="display_alert(event)" />
           <!-- <button type="button" value="Submit">Submit</button> -->
         </form>
         <a href="/"><input type="button" name="button" value="Back to Home Page"></a>
