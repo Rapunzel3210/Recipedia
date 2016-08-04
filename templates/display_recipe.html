@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Display</title>
+
+  </head>
+
+  <body>
+
+    <center>
+    <h1>Here is the recipe you selected:</h1>
+    <p>Author's Name: {{ author_answer }} </p>
+    <p>Recipe Name: {{ name_answer }} </p>
+    <p>Difficulty Level: {{ level_answer }} </p>
+    <!-- <p>Added Ingredients: {{ new_ingredients_answer }} </p> -->
+    <p>Time: {{ time_answer }} </p>
+    <p>Steps: {{ steps_answer }} </p>
+    <p>Notes: {{ notes_answer }} </p>
+    <a href="/search"><input type="button" name="button" value="Search For Another Recipe"></a>
+    <a href="/"><input type="button" name="button" value="Back to Home Page"></a>
+    </center>
+
+  </body>
+
+</html>
