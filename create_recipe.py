@@ -79,9 +79,19 @@ class RecipeResultsHandler(webapp2.RequestHandler):
 
         for recipe in recipes:
             self.response.out.write(
-                '<blockquote>%s</blockquote>' % recipe.recipe_name)
+                '<a href="/get?name=%s">%s</a>' % (recipe.recipe_name, recipe.recipe_name))
+
+        self.response.out.write('<p><a href="/search"><input type="button" name="button" value="Search For Another Recipe"></a></p>')
+        self.response.out.write('<p><a href="/"><input type="button" name="button" value="Back to Home Page"></a></p>')
 
         self.response.out.write('</body></html>')
+
+# class DisplayRecipeHandler(webapp2.RequestHandler):
+#
+#     def get(self):
+#         template = jinja_environment.get_template('templates/home.html')
+#
+#         self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
   ('/', HomeHandler),
