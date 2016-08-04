@@ -78,7 +78,6 @@ class RecipeResultsHandler(webapp2.RequestHandler):
         recipes = Recipe.query().filter(Recipe.level==level).order(Recipe.recipe_name).fetch(
             self.GREETINGS_PER_PAGE)
 
-        sorted(recipes)
         self.response.out.write('<html><body>')
 
         for recipe in recipes:
