@@ -43,6 +43,7 @@
           <input id="textinput" />
           <script>
           var new_ing = "";
+
           function myFunction() {
               var node = document.createElement("INPUT");
               node.type="checkbox";
@@ -52,7 +53,7 @@
               document.getElementById("addI").appendChild(textnode);
               var br = document.createElement("br");
               document.getElementById("addI").appendChild(br);
-
+              new_ing +=document.getElementById("textinput").value+"\t";
               //document.write("\n");
             node.name="ingredient";
             node.value=document.getElementById("textinput").value;
