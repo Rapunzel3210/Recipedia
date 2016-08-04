@@ -34,22 +34,28 @@ class ResultsHandler(webapp2.RequestHandler):
         author_value=self.request.get('author')
         name_value=self.request.get('name')
         level_value=(self.request.get('level'))
-        new_ingredients_value=self.request.get('new_ingredients')
+        ingredient_value=self.request.get('ingredient', allow_multiple=True)
         time_value=self.request.get('time')
         steps_value=self.request.get('steps')
         notes_value=self.request.get('notes')
-
+        # loop through each element in ingredient_value and concatenate to a string variable
+        added_ingredient=""
+        for index in range(len(ingredient_value)):
+            if index == len(ingredient_value) - 1:
+                added_ingredient += ingredient_value[index]
+            else:
+                added_ingredient += ingredient_value[index] + ", "
         new_recipe = {
 
         'author_answer': author_value,
         'name_answer': name_value,
         'level_answer': level_value,
-        'new_ingredients_answer': new_ingredients_value,
+        'ingredient_answer': added_ingredient,
         'time_answer': time_value,
         'steps_answer': steps_value,
         'notes_answer': notes_value
         }
-        recipe_record = Recipe(author=author_value, recipe_name=name_value, level=level_value, new_ingredients=new_ingredients_value, time=time_value, steps=steps_value, notes=notes_value)
+        recipe_record = Recipe(author=author_value, recipe_name=name_value, level=level_value, ingredient=added_ingredient, time=time_value, steps=steps_value, notes=notes_value)
         recipe_key = recipe_record.put()
 
         self.response.write(template.render(new_recipe))
@@ -59,7 +65,7 @@ class Recipe(ndb.Model):
     author = ndb.StringProperty(required=True)
     recipe_name = ndb.StringProperty(required=True)
     level = ndb.StringProperty(required=True)
-    new_ingredients = ndb.StringProperty(required=True)
+    ingredient = ndb.StringProperty(required=True)
     time = ndb.StringProperty(required=True)
     steps = ndb.StringProperty(required=True)
     notes = ndb.StringProperty(required=True)
@@ -68,8 +74,9 @@ class Recipe(ndb.Model):
     def query_recipe(cls, level_value):
         return cls.query(level=level_value)
 
-# class Ingredient(ndb.model):
-#     ingredient_name = ndb.StringProperty(required=True)
+class Ingredient(ndb.Model):
+    ingredient_name = ndb.StringProperty(required=True)
+
 
 class RecipeResultsHandler(webapp2.RequestHandler):
     GREETINGS_PER_PAGE = 20
@@ -85,7 +92,7 @@ class RecipeResultsHandler(webapp2.RequestHandler):
 
         for recipe in recipes:
             self.response.out.write(
-                '<p><a href="/display?name=%s&author=%s&level=%s&time=%s&steps=%s&notes=%s">%s</a></p>' % (recipe.recipe_name, recipe.author, recipe.level, recipe.time, recipe.steps, recipe.notes, recipe.recipe_name))
+                '<p><a href="/display?name=%s&author=%s&level=%s&ingredients=%s&time=%s&steps=%s&notes=%s">%s</a></p>' % (recipe.recipe_name, recipe.author, recipe.level, recipe.ingredient, recipe.time, recipe.steps, recipe.notes, recipe.recipe_name))
 
         self.response.out.write('<p><a href="/search"><input type="button" name="button" value="Search For Another Recipe"></a></p>')
         self.response.out.write('<p><a href="/"><input type="button" name="button" value="Back to Home Page"></a></p>')
@@ -99,6 +106,7 @@ class DisplayRecipeHandler(webapp2.RequestHandler):
         name = self.request.get('name')
         author = self.request.get('author')
         level = self.request.get('level')
+        ingredients=self.request.get('ingredients')
         time = self.request.get('time')
         steps = self.request.get('steps')
         notes = self.request.get('notes')
@@ -106,7 +114,7 @@ class DisplayRecipeHandler(webapp2.RequestHandler):
         author_value = author
         name_value = name
         level_value = level
-    #    new_ingredients_value = Recipe.name
+        ingredients_value=ingredients
         time_value = time
         steps_value = steps
         notes_value = notes
@@ -117,7 +125,7 @@ class DisplayRecipeHandler(webapp2.RequestHandler):
         'author_answer': author_value,
         'name_answer': name_value,
         'level_answer': level_value,
-    #    'new_ingredients_answer': Recipe.new_ingredients,
+        'ingredients_answer': ingredients_value,
         'time_answer': time_value,
         'steps_answer': steps_value,
         'notes_answer': notes_value

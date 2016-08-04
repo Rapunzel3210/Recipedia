@@ -4,6 +4,7 @@
     <title>Results</title>
     <link type="text/css" rel="stylesheet" href="/stylesheets/results.css" />
   </head>
+<<<<<<< HEAD
   
     <body>
       <div>
@@ -23,5 +24,26 @@
           <p id="img1"><img src="http://www.greedyroadcafe.com/wp-content/uploads/dessin-anim%C3%A9-d-un-cuisinier-dans-la-cuisine-22282981.jpg" alt="cartoon"></img></p>
         </center>
     </div>
+=======
+
+  <body>
+
+    <center>
+    <h1>Results</h1>
+    <h2>Thank you for adding your recipe!</h2>
+    <!-- <h2>Here's what users of the website will see:</h2> -->
+    <p>Author's Name: {{ author_answer }} </p>
+    <p>Recipe Name: {{ name_answer }} </p>
+    <p>Difficulty Level: {{ level_answer }} </p>
+    <p>Ingredients: {{ ingredient_answer }} </p>
+    <p>Time: {{ time_answer }} </p>
+    <p>Steps:</p>
+    <p><center> {{ steps_answer }}</center> </p>
+    <p>Notes:</p>
+    <p><center> {{ notes_answer }} </center></p>
+    <a href="/new_recipe"><input type="button" name="button" value="Add Another Recipe"></a>
+    <a href="/"><input type="button" name="button" value="Back to Home Page"></a>
+  </center>
+>>>>>>> 7a9ef12b434f11b99950eb17c48342f06e1b74ab
   </body>
 </html>
