@@ -76,6 +76,7 @@ class RecipeResultsHandler(webapp2.RequestHandler):
             self.GREETINGS_PER_PAGE)
 
         self.response.out.write('<html><body>')
+        self.response.out.write('<ol>')
 
         for recipe in recipes:
             self.response.out.write(
@@ -84,6 +85,7 @@ class RecipeResultsHandler(webapp2.RequestHandler):
         self.response.out.write('<p><a href="/search"><input type="button" name="button" value="Search For Another Recipe"></a></p>')
         self.response.out.write('<p><a href="/"><input type="button" name="button" value="Back to Home Page"></a></p>')
 
+        self.response.out.write('<ol>')
         self.response.out.write('</body></html>')
 
 class DisplayRecipeHandler(webapp2.RequestHandler):
