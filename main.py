@@ -89,9 +89,20 @@ class RecipeResultsHandler(webapp2.RequestHandler):
 # class DisplayRecipeHandler(webapp2.RequestHandler):
 #
 #     def get(self):
-#         template = jinja_environment.get_template('templates/home.html')
+#         template = jinja_environment.get_template('templates/display_recipe.html')
 #
-#         self.response.write(template.render())
+#         displayed_recipe = {
+#
+#         'author_answer': Recipe.author,
+#         'name_answer': Recipe.name,
+#         'level_answer': Recipe.level,
+#         'new_ingredients_answer': Recipe.new_ingredients,
+#         'time_answer': Recipe.time,
+#         'steps_answer': Recipe.steps,
+#         'notes_answer': Recipe.notes
+#         }
+#
+#         self.response.write(template.render(displayed_recipe))
 
 app = webapp2.WSGIApplication([
   ('/', HomeHandler),
