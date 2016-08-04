@@ -79,10 +79,12 @@ class RecipeResultsHandler(webapp2.RequestHandler):
 
         for recipe in recipes:
             self.response.out.write(
-                '<blockquote>%s</blockquote>' % recipe.recipe_name)
+                '<a href="/get?name=%s">%s</a>' % (recipe.recipe_name, recipe.recipe_name))
 
         self.response.out.write('</body></html>')
 
+class DisplayRecipeHandler(webapp2.RequestHandler):
+    
 app = webapp2.WSGIApplication([
   ('/', HomeHandler),
   ('/new_recipe', NewRecipeHandler),
