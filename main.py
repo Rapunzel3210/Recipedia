@@ -75,8 +75,11 @@ class RecipeResultsHandler(webapp2.RequestHandler):
     GREETINGS_PER_PAGE = 20
     def get(self):
         level = self.request.get('level')
-        recipes = Recipe.query().filter(Recipe.level==level).order(Recipe.recipe_name).fetch(
-            self.GREETINGS_PER_PAGE)
+        # recipes = [r for r in Recipe.query().filter(Recipe.level==level).order('recipe_name')]
+        recipes = Recipe.query()
+        recipes = recipes.filter(Recipe.level==level)
+        recipes = recipes.order(Recipe.recipe_name)
+        recipes_results = recipes.fetch(self.GREETINGS_PER_PAGE)
 
         self.response.out.write('<html><body>')
 
