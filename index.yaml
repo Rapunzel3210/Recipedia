@@ -1,0 +1,6 @@
+indexes:
+  
+- kind: Recipe
+  properties:
+  - name: level
+  - name: recipe_name
