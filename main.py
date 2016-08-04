@@ -54,6 +54,7 @@ class ResultsHandler(webapp2.RequestHandler):
 
         self.response.write(template.render(new_recipe))
 
+
 class Recipe(ndb.Model):
     author = ndb.StringProperty(required=True)
     recipe_name = ndb.StringProperty(required=True)
@@ -67,16 +68,18 @@ class Recipe(ndb.Model):
     def query_recipe(cls, level_value):
         return cls.query(level=level_value)
 
+# class Ingredient(ndb.model):
+#     ingredient_name = ndb.StringProperty(required=True)
 
 class RecipeResultsHandler(webapp2.RequestHandler):
     GREETINGS_PER_PAGE = 20
     def get(self):
         level = self.request.get('level')
-        recipes = Recipe.query().filter(Recipe.level==level).fetch(
+        recipes = Recipe.query().filter(Recipe.level==level).order(Recipe.recipe_name).fetch(
             self.GREETINGS_PER_PAGE)
 
+        sorted(recipes)
         self.response.out.write('<html><body>')
-        self.response.out.write('<ol>')
 
         for recipe in recipes:
             self.response.out.write(
@@ -85,7 +88,6 @@ class RecipeResultsHandler(webapp2.RequestHandler):
         self.response.out.write('<p><a href="/search"><input type="button" name="button" value="Search For Another Recipe"></a></p>')
         self.response.out.write('<p><a href="/"><input type="button" name="button" value="Back to Home Page"></a></p>')
 
-        self.response.out.write('<ol>')
         self.response.out.write('</body></html>')
 
 class DisplayRecipeHandler(webapp2.RequestHandler):
