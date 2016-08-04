@@ -93,7 +93,7 @@ class DisplayRecipeHandler(webapp2.RequestHandler):
         name = self.request.get('name')
         author = self.request.get('author')
         level = self.request.get('level')
-        time = self.request.get('steps')
+        time = self.request.get('time')
         steps = self.request.get('steps')
         notes = self.request.get('notes')
 
