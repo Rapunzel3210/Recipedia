@@ -1,5 +1,5 @@
 h1 {
-  font-size: 50px;
+  font-size: 80px;
   font-style: oblique;
   font-family: Impact, Charcoal, sans-serif;
   background: -webkit-linear-gradient(blue, grey);
@@ -10,7 +10,7 @@ h1 {
 }
 
 body {
-  font-size: 20px;
+  font-size: 35px;
   background-color: #6DB3F2;
   background-image: url("http://www.luxurylink.com/images/article/xTopChef-03-Stefan.jpg.pagespeed.ic.7_pPo1lFTS.jpg");
   background-repeat: no-repeat;
@@ -21,3 +21,27 @@ body {
 p {
   font-size: 20px;
 }
+
+select {
+  width: 10%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  text-align: center;
+}
+
+input[type=submit] {
+    width: 25%;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: skyblue;

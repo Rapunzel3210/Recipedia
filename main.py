@@ -81,7 +81,7 @@ class RecipeResultsHandler(webapp2.RequestHandler):
         recipes = recipes.order(Recipe.recipe_name)
         recipes_results = recipes.fetch(self.GREETINGS_PER_PAGE)
 
-        self.response.out.write('<html><body>')
+        self.response.out.write('<html style="background-color: #6DB3F2;"><body>')
 
         for recipe in recipes:
             self.response.out.write(
