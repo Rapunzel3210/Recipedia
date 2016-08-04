@@ -1,8 +1,114 @@
+h1 {
+  font-size: 50px;
+  font-style: oblique;
+  font-family: Impact, Charcoal, sans-serif;
+  background: -webkit-linear-gradient(blue, grey);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-decoration: underline;
+}
+
  body {
+   /*background: linear-gradient(blue, grey);*/
+   width: 50%;
+   margin: auto;
+   text-align: center;
    background-image: url(http://www.fitbrains.com/blog/wp-content/uploads/2013/09/2ahi2c3.gif);
-   background-repeat: no-repeat;
+   /*background-repeat: no-repeat;*/
  }
 
+ input[type=text], select {
+     width: 50%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+     text-align: center;
+     font-size: 16px;
+ }
+
+ input[type=submit] {
+     width: 25%;
+     background-color: blue;
+     color: white;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ input[type=submit]:hover {
+     background-color: skyblue;
+ }
+
+ input[type=text] {
+    border: 2px solid skyblue;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    border-color: skyblue;
+    font-size: 16px;
+}
+
+select {
+    width: 20%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+div {
+  margin: auto;
+  background-color: #D4D7FE;
+  /*background-color: #6DB3F2;*/
+  border: 2px solid skyblue;
+  border-radius: 30px;
+
+}
+
+#div2 {
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  width: 75%;
+}
+
+#p1 {
+  text-align:center;
+}
+
+#img1 {
+  float:left;
+}
+
+/*#img2 {
+  float: right;
+  clear: left;
+  overflow: auto;
+}*/
+
+/*Margin auto to center the div in the middle*/
  /*.ingredient {
  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eb4196), color-stop(1, #e83737));
  	background:-moz-linear-gradient(top, #eb4196 5%, #e83737 100%);

@@ -4,6 +4,8 @@
 
   <head>
     <title>Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/script/script.js"></script>
     <link type="text/css" rel="stylesheet" href="/stylesheets/search.css" />
     <script type ="text/javascript" src="/script/search.js"></script>
   </head>
@@ -27,9 +29,11 @@
             <input type="checkbox" name="ingredient" value="Chicken">Chicken<br>
             </form>
       </p> -->
-      <input type="submit" action="submit"></input>
+      <input id="submit" type="submit" action="submit"></input>
     </form>
-    <a href="/"><input type="button" name="button" value="Back to Home Page"></a>
+    <a href="/"><input type="button" name="button" value="Back to Home Page"></a><br>
+    <div id="result"></div>
+    <!-- <img src="http://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/53/99/6/pictmxvTZ.jpg" alt="food"></img -->
   </body>
 </center>
 
