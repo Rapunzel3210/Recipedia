@@ -1,0 +1,15 @@
+h1 {
+  font-size: 50px;
+  font-style: oblique;
+  font-family: Impact, Charcoal, sans-serif;
+  background: -webkit-linear-gradient(blue, grey);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-decoration: underline;
+}
+
+body {
+  font-size: 20px;
+  background-color: #6DB3F2;
+}

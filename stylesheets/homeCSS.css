@@ -13,8 +13,7 @@ body {
   background-image: url(https://vathev.files.wordpress.com/2015/02/open-book.png);
   background-repeat: no-repeat;
   background-size: cover;
-  /*background: linear-gradient(270deg, #ea4f85, #99187e, #bf247c, #df3350);
-  background-size: 800% 800%;
+  background-color: #6DB3F2;
 
   animation: AnimationName 29s ease infinite;
 
@@ -23,9 +22,6 @@ body {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}*/
   }
-
-  /*background-image: url(http://www.siue.edu/~vaupont/images/GetCooking.png);*/
-  /*background-repeat: no-repeat;*/
 }
 
 /*input[type=button] {
@@ -38,14 +34,12 @@ body {
   float:left;
   display:block;
   margin-left:20%;
-  /*clear:right;*/
 }
 
 #btn2 {
   float:right;
   display:block;
   margin-right:30%;
-  /*clear:left;*/
 }
 
 .new {
@@ -113,78 +107,3 @@ body {
     background: #2E5481;
     border: solid 1px #203E5F;
 }
-/*.new {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eb4196), color-stop(1, #e83737));
-	background:-moz-linear-gradient(top, #eb4196 5%, #e83737 100%);
-	background:-webkit-linear-gradient(top, #eb4196 5%, #e83737 100%);
-	background:-o-linear-gradient(top, #eb4196 5%, #e83737 100%);
-	background:-ms-linear-gradient(top, #eb4196 5%, #e83737 100%);
-	background:linear-gradient(to bottom, #eb4196 5%, #e83737 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb4196', endColorstr='#e83737',GradientType=0);
-	background-color:#eb4196;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #000000;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Trebuchet MS;
-	font-size:17px;
-	font-weight:bold;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #000000;
-}
-.new:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e83737), color-stop(1, #eb4196));
-	background:-moz-linear-gradient(top, #e83737 5%, #eb4196 100%);
-	background:-webkit-linear-gradient(top, #e83737 5%, #eb4196 100%);
-	background:-o-linear-gradient(top, #e83737 5%, #eb4196 100%);
-	background:-ms-linear-gradient(top, #e83737 5%, #eb4196 100%);
-	background:linear-gradient(to bottom, #e83737 5%, #eb4196 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e83737', endColorstr='#eb4196',GradientType=0);
-	background-color:#e83737;
-}
-.new:active {
-	position:relative;
-	top:1px;
-}
-
-.search {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eb4196), color-stop(1, #e83737));
-	background:-moz-linear-gradient(top, #eb4196 5%, #e83737 100%);
-	background:-webkit-linear-gradient(top, #eb4196 5%, #e83737 100%);
-	background:-o-linear-gradient(top, #eb4196 5%, #e83737 100%);
-	background:-ms-linear-gradient(top, #eb4196 5%, #e83737 100%);
-	background:linear-gradient(to bottom, #eb4196 5%, #e83737 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb4196', endColorstr='#e83737',GradientType=0);
-	background-color:#eb4196;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #000000;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Trebuchet MS;
-	font-size:17px;
-	font-weight:bold;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #000000;
-}
-.search:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e83737), color-stop(1, #eb4196));
-	background:-moz-linear-gradient(top, #e83737 5%, #eb4196 100%);
-	background:-webkit-linear-gradient(top, #e83737 5%, #eb4196 100%);
-	background:-o-linear-gradient(top, #e83737 5%, #eb4196 100%);
-	background:-ms-linear-gradient(top, #e83737 5%, #eb4196 100%);
-	background:linear-gradient(to bottom, #e83737 5%, #eb4196 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e83737', endColorstr='#eb4196',GradientType=0);
-	background-color:#e83737;
-}
-.search:active {
-	position:relative;
-	top:1px;
-}*/
