@@ -97,7 +97,6 @@ class DisplayRecipeHandler(webapp2.RequestHandler):
         steps = self.request.get('steps')
         notes = self.request.get('notes')
 
-        self.response.out.write('name' + ' ' + name)
         author_value = author
         name_value = name
         level_value = level
