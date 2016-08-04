@@ -68,8 +68,9 @@ class Recipe(ndb.Model):
     def query_recipe(cls, level_value):
         return cls.query(level=level_value)
 
-# class Ingredient(ndb.model):
-#     ingredient_name = ndb.StringProperty(required=True)
+class Ingredient(ndb.Model):
+    # ingredient_name = ndb.StringProperty(required=True)
+    pass
 
 class RecipeResultsHandler(webapp2.RequestHandler):
     GREETINGS_PER_PAGE = 20
