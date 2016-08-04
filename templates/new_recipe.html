@@ -42,6 +42,7 @@
           <a class="ingredient" onclick="myFunction()">Add Ingredients</a>
           <input id="textinput" />
           <script>
+          var new_ing = "";
           function myFunction() {
               var node = document.createElement("INPUT");
               node.type="checkbox";
@@ -55,7 +56,7 @@
               //document.write("\n");
             node.name="ingredient";
             node.value=document.getElementById("textinput").value;
-
+            new_ing += document.getElementById("textinput").value + ", ";
               }
           </script>
 
