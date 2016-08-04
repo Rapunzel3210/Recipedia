@@ -83,8 +83,8 @@ class RecipeResultsHandler(webapp2.RequestHandler):
 
         self.response.out.write('</body></html>')
 
-class DisplayRecipeHandler(webapp2.RequestHandler):
-    
+#class DisplayRecipeHandler(webapp2.RequestHandler):
+
 app = webapp2.WSGIApplication([
   ('/', HomeHandler),
   ('/new_recipe', NewRecipeHandler),
