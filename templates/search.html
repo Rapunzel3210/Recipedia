@@ -11,17 +11,18 @@
   </head>
 
 <center>
-  <body>
-    <h1>Search</h1>
-    <form method="GET" action="recipe_results">
-      <p><strong>Level of Difficulty:</strong><br>
+  <div id="div">
+    <body>
+      <h1>Search</h1>
+      <form method="GET" action="recipe_results">
+        <p><strong>Level of Difficulty:</strong><br>
           <select name= "level">
             <!-- <option value="All">All</option> -->
             <option value="Easy">Easy</option>
             <option value="Medium">Medium</option>
             <option value="Hard">Hard</option>
           </select>
-      </p>
+        </p>
 
       <!-- <p><strong>Ingredients:</strong><br>
             <form action="">
@@ -29,12 +30,14 @@
             <input type="checkbox" name="ingredient" value="Chicken">Chicken<br>
             </form>
       </p> -->
-      <input id="submit" type="submit" action="submit"></input>
-    </form>
-    <a href="/"><input type="button" name="button" value="Back to Home Page"></a><br>
-    <div id="result"></div>
+        <input id="submit" type="submit" action="submit"></input>
+      </form>
+      <a href="/">Back to Home Page</a>
+      <!-- <input type="button" name="button" value="Back to Home Page"></a><br> -->
+      <div id="result"></div>
     <!-- <img src="http://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/53/99/6/pictmxvTZ.jpg" alt="food"></img -->
-  </body>
+    </body>
+  </div>
 </center>
 
 </html>
